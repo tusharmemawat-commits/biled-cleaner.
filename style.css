@@ -1,0 +1,30 @@
+body { 
+    background: radial-gradient(circle at top, #1a1a2e, #16213e); 
+    color: white; 
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.glass { 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px; 
+}
+
+.glow-button { 
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5); 
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.5); 
+    transition: 0.3s; 
+    color: white;
+}
+
+.glow-button:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.8); 
+}
+
+.chat-container { 
+    height: 300px; 
+    overflow-y: auto; 
+}
