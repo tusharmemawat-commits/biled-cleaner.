@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biled Cleaner AI</title>
+    <style>
+        /* Yahan CSS daal dein */
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #eee; }
+        .box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Biled Cleaner 👕</h1>
+        <input type="text" id="userInput" placeholder="Ask AI anything...">
+        <button onclick="askAI()">Puchiye</button>
+        <p id="out"></p>
+    </div>
+
+    <script>
+        // Yahan AI ka logic daal dein
+        async function askAI() {
+            const msg = document.getElementById('userInput').value;
+            const res = document.getElementById('out');
+            res.innerText = "Soch raha hoon...";
+            
+            const key = "AIzaSyDdTovT0PYgykKkzHHpAMXgX1uzHXWaSoY";
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`;
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents: [{ parts: [{ text: msg }] }] })
+            });
+            const data = await response.json();
+            res.innerText = data.candidates[0].content.parts[0].text;
+        }
+    </script>
+</body>
+</html>
