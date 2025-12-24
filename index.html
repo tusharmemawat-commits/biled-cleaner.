@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AURASYNTH | Luxury AI</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AURASYNTH | Luxury Fashion AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex items-center justify-center min-h-screen">
+<body>
     <div class="bg-glow"></div>
-
-    <main class="apple-glass w-full max-w-md flex flex-col shadow-2xl overflow-hidden">
-        
-        <header class="p-6 text-center border-b border-white/10">
-            <h1 id="app-name" class="text-2xl font-semibold tracking-tight uppercase">AURASYNTH</h1>
-            <p id="app-subtitle" class="text-[10px] text-white/40 tracking-[4px] mt-1 uppercase">Loading System...</p>
+    <main class="iphone-container">
+        <header class="header">
+            <h1 id="app-name">AURASYNTH</h1>
+            <div class="brand-line">
+                <span class="line"></span>
+                <p id="app-subtitle">BILED CLEANER • ID: 88543 K J</p>
+                <span class="line"></span>
+            </div>
         </header>
-
-        <div id="chat-box" class="chat-area flex-1 overflow-y-auto p-6 space-y-4">
+        <div id="chat-box" class="chat-area"></div>
+        <footer class="input-section">
+            <div class="input-bar">
+                <input type="text" id="userInput" placeholder="Ask your stylist..." autocomplete="off">
+                <button onclick="askAI()" id="sendBtn">Ask</button>
             </div>
-
-        <footer class="p-6 pt-0">
-            <div class="input-container">
-                <input type="text" id="userInput" placeholder="Ask AURASYNTH..." autocomplete="off">
-                <button onclick="askAI()" id="sendBtn" class="apple-btn">Ask</button>
-            </div>
-            <div id="status-bar" class="system-status">
-                Initializing...
-            </div>
+            <p id="status-bar" class="system-status">SYSTEM ACTIVE • ADMIN CONTROL ON</p>
         </footer>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
